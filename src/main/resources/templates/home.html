@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/navigationBar.css">
 </head>
 <body>
-<h1>Libra</h1>
+<nav id="navigation">
+    <a th:href="@{/about}">About Libra</a>
+    <a th:href="@{/catalog}">Catalog</a>
+    <a th:href="@{/register}">Register</a>
+    <a th:href="@{/login}">Login</a>
+    <span sec:authorize="isAuthenticated()" sec:authentication="name">name</span>
+    <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post"><input type="submit" value="Sign out"></form>
+</nav>
+<main>
+
+</main>
 </body>
 </html>

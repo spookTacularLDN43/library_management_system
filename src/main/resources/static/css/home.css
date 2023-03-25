@@ -1,0 +1,10 @@
+*{
+box-sizing: border-box;
+}
+body{
+background-image: linear-gradient(to right, rgb(114, 158, 135), rgb(167, 184, 134), rgb(213, 219, 171), rgb(229, 232, 209));
+}
+
+form{
+display: inline;
+}
